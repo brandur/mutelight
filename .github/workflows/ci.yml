@@ -4,8 +4,8 @@ on:
   pull_request:
   push:
   schedule:
-    # at minute 0 past every 6th hour
-    - cron: "0 */6 * * *"
+    # once a week: Sunday at 4 AM
+    - cron: "0 4 * * 0"
 
 jobs:
   build:
