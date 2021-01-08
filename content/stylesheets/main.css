@@ -1,4 +1,9 @@
 :root {
+    --font_family: "eb garamond", "palatino linotype", palatino, "times new roman", serif;
+    --font_family_headers: georgia, serif;
+    --font_family_monospace: Monaco, "Lucida Console", "Bitstream Vera Sans Mono", Courier, monospace;
+    --font_family_sans_serif: tahoma, sans-serif;
+
     /* color used for headers: h1, h2, etc. */
     --header_color: #bdbd8c;
 
@@ -43,14 +48,31 @@ blockquote {
 
 body {
   color: var(--primary_color);
-  font-family: "eb garamond","palatino linotype",palatino,"times new roman",serif;
-  font-size: 17px;
+  font-family: var(--font_family);
+
+  /*
+   * Root font size. All other sizes with "rem" are relative to this.
+   *
+   * This corresponds to the default font size of 16px.
+   */
+  font-size: 105%;
+
+  line-height: 1.6;
+
   font-weight: 100;
   text-shadow: 0 0 2px black;
   background: black url("/assets/images/back.jpg") repeat-y scroll center;
   margin: 0;
   padding: 0;
   border: 0;
+
+  /*
+   * This does seem to make a big difference, especially for bad colors and
+   * thin fonts like mine.
+   */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -90,24 +112,24 @@ strong {
 
 #shift #wrapper h1 {
   color: var(--header_color);
-  font-family: georgia,serif;
-  font-size: 24px;
+  font-family: var(--font_family_headers);
+  font-size: 1.5rem;
   font-weight: normal;
   padding: 0 12px;
 }
 
 #shift #wrapper h2 {
   color: var(--header_color);
-  font-family: georgia,serif;
-  font-size: 20px;
+  font-family: var(--font_family_headers);
+  font-size: 1.3rem;
   font-weight: normal;
   padding: 0 12px;
 }
 
 #shift #wrapper h3 {
   color: var(--header_color);
-  font-family: tahoma,sans-serif;
-  font-size: 16px;
+  font-family: var(--font_family_headers);
+  font-size: 1rem;
   font-weight: bold;
   padding: 0 12px;
 }
@@ -126,7 +148,7 @@ strong {
 
 #shift #wrapper .important,#shift #wrapper .subheading {
   color: var(--highlight_color);
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 #shift #wrapper .content {
@@ -141,8 +163,8 @@ strong {
 }
 
 #shift #wrapper .content code,#shift #wrapper .content pre {
-  font-family: Monaco,"Lucida Console","Bitstream Vera Sans Mono",Courier,monospace;
-  font-size: 12px;
+  font-family: var(--font_family_monospace);
+  font-size: 0.8rem;
   background: black;
   line-height: 1.3em;
   border: 1px solid var(--border_color);
@@ -169,7 +191,7 @@ strong {
 #shift #wrapper .content .figure {
   background: black;
   border: 1px solid var(--border_color);
-  font-size: 15px;
+  font-size: 0.9rem;
   margin: 0;
   padding: 14px 16px;
   position: relative;
@@ -211,7 +233,7 @@ strong {
 
 #shift #wrapper .content table caption {
   color: var(--header_color);
-  font-size: 15px;
+  font-size: 0.9rem;
   text-align: center;
   margin: 0 0 6px 0;
 }
@@ -237,7 +259,7 @@ strong {
 }
 
 #shift #wrapper .content p.footnote {
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 #shift #wrapper .content p.footnote sup {
@@ -246,7 +268,7 @@ strong {
 
 #shift #wrapper .content p.meta {
   color: var(--tertiary_color);
-  font-size: 15px;
+  font-size: 0.9rem;
   font-style: italic;
 }
 
@@ -262,8 +284,8 @@ strong {
 
 #shift #wrapper .series {
   color: var(--secondary_color);
-  font-family: tahoma,sans-serif;
-  font-size: 14px;
+  font-family: var(--font_family_sans_serif);
+  font-size: 0.8rem;
   font-style: italic;
   font-weight: normal;
   margin: 16px 10px;
@@ -297,7 +319,7 @@ strong {
 }
 
 #shift #wrapper #nav {
-  font-size: 15px;
+  font-size: 0.9rem;
   text-align: center;
   border-top: 2px solid var(--separator_color);
   padding: 14px 0;
