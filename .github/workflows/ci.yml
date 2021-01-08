@@ -1,0 +1,108 @@
+name: mutelight CI
+
+on:
+  pull_request:
+  push:
+  schedule:
+    # at minute 0 past every 6th hour
+    - cron: "0 */6 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    env:
+      CLOUDFRONT_ID: E1ABQWT38D3ARZ
+      GOOGLE_ANALYTICS_ID: UA-6901854-1
+
+    steps:
+      - name: Install Go
+        uses: actions/setup-go@v2
+
+      # Used to force dependencies to re-cache once a day so that we don't run
+      # into any weird cache invalidation problems, so to make sure that
+      # dependency fetches keep working.
+      - name: Get date
+        id: get-date
+        run: |
+          echo "::set-output name=date::$(/bin/date -u "+%Y-%m-%d")"
+        shell: bash
+
+      - name: Cache dependencies
+        id: cache-dependencies
+        uses: actions/cache@v2
+        with:
+          # Don't try to use variables in these paths. They don't seem to work
+          # and it'll lead to hours of confusion. You can use a `~`, but I've
+          # expanded HOME so that finding things is easier.
+          path: |
+            /home/runner/go/bin/
+            /home/runner/go/pkg/mod/
+          key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-cache-dependencies-v2
+
+      - name: Install Golint
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: go get -u golang.org/x/lint/golint
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Debug
+        run: |
+          echo "github.ref=${{ github.ref }}"
+          echo "go env GOPATH=$(go env GOPATH)"
+          echo "pwd=$(pwd)"
+          echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
+          echo "HOME=${HOME}"
+
+      - name: Clean
+        run: make clean
+
+      - name: "Go: Install"
+        run: make install
+
+      - name: "Go: Test"
+        run: make test
+
+      - name: "Go: Vet"
+        run: make vet
+
+      - name: "Check: Gofmt"
+        run: make check-gofmt
+
+      - name: "Check: Golint"
+        # I usually run tasks through make, but for some reasons GitHub Actions
+        # really doesn't like the `make lint` task, so I've unfurled it here.
+        # The error:
+        #
+        #     /home/runner/work/_temp/fcd52edc-894a-48eb-bf93-f8b8d5752bce.sh: line 1: unexpected EOF while looking for matching `"'
+        #
+        run: $(go env GOPATH)/bin/golint -set_exit_status ./...
+
+      # - name: "Build: Development"
+      #   run: make build
+      #   env:
+      #     DRAFTS: true
+      #     TARGET_DIR: ./public-dev
+
+      - name: "Build: Production"
+        run: make build
+
+      # - name: "Deploy: Development"
+      #   run: make deploy
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     S3_BUCKET: mutelight-org-dev
+      #     TARGET_DIR: ./public-dev
+      #   if: github.ref == 'refs/heads/master'
+
+      - name: "Deploy: Production"
+        run: make deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: mutelight-org
+          TARGET_DIR: ./public
+        if: github.ref == 'refs/heads/master'
