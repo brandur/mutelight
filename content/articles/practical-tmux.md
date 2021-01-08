@@ -159,7 +159,7 @@ fi
 
 Here's my complete `.tmux.conf` for reference.
 
-```
+``` sh
 # C-b is not acceptable -- Vim uses it
 set-option -g prefix C-a
 bind-key C-a last-window
