@@ -36,4 +36,4 @@ _myButton.Click -= myButton_Click;
 
 Regardless of how much C# you now, it's pretty obvious here that `myButton_Click` is going to be unregistered by the time this snippet finishes executing.
 
-<span class="addendum">Addendum &mdash;</span> While looking around for delegate information, I came across a really [great article on weak event listeners in C#](http://www.codeproject.com/KB/cs/WeakEvents.aspx). This is an important concept because despite all the memory safety C# provides to you, it's still easy to get memory leaks from objects dangling by a single delegate reference that wasn't property unregistered.
+<span class="addendum">Addendum --</span> While looking around for delegate information, I came across a really [great article on weak event listeners in C#](http://www.codeproject.com/KB/cs/WeakEvents.aspx). This is an important concept because despite all the memory safety C# provides to you, it's still easy to get memory leaks from objects dangling by a single delegate reference that wasn't property unregistered.

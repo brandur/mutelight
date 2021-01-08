@@ -53,7 +53,7 @@ With the release of Visual Studio 2005, Microsoft started to include a new build
 
 MSBuild is more than just a command though; it can also be used to read an MSBuild file written in XML to follow much more complex sets of instructions in a similar fashion to NAnt. I haven't had the chance to explore it fully, but I hope to do a future post comparing its features and ease-of-use to NAnt's.
 
-For now, I found that calling the MSBuild executable from my NAnt scripts acts like a drop-in replacement for NAnt's `<solution>` task with one important difference &mdash; MSBuild works.
+For now, I found that calling the MSBuild executable from my NAnt scripts acts like a drop-in replacement for NAnt's `<solution>` task with one important difference -- MSBuild works.
 
 A NAnt Solution
 ---------------

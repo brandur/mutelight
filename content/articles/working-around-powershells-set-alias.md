@@ -16,4 +16,4 @@ function vehicles { invoke-sqlcmd "select * from agencyvehicle" }
 
 Use a function instead! The syntax is concise and doesn't come with any harmful side effects.
 
-<span class="addendum">Edit (2010/12/02) &mdash;</span> more logical to use a function rather than an alias to a function (_duh!_).
+<span class="addendum">Edit (2010/12/02) --</span> more logical to use a function rather than an alias to a function (_duh!_).

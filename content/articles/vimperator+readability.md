@@ -6,9 +6,9 @@ tiny_slug = "26"
 title = "Vimperator + Readability"
 +++
 
-* *[Vimperator](http://vimperator.org/)* &mdash; gives Firefox Vim bindings and enables keyboard-based web browsing.
+* *[Vimperator](http://vimperator.org/)* -- gives Firefox Vim bindings and enables keyboard-based web browsing.
 
-* *[Readability](http://lab.arc90.com/experiments/readability/)* &mdash; reformats hard-to-read web pages (all too common these days) for sane consumption.
+* *[Readability](http://lab.arc90.com/experiments/readability/)* -- reformats hard-to-read web pages (all too common these days) for sane consumption.
 
 Normally, Readability is dragged to your browser's bookmarks toolbar and is used from there. In Vimperator, bookmarks are not too convenient to access, so it's useful to add a quickmark so that you can activate Readability in three quick keystrokes.
 

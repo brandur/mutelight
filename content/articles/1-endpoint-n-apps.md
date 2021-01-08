@@ -16,7 +16,7 @@ One Endpoint
 
 In case the $20/mo. per app for a custom domain seems a steep price to pay, you may be happy to find out that in many cases a single SSL Endpoint can be shared between many apps.
 
-Requests coming through an SSL Endpoint follow the same rules as the rest of the platform&mdash;a request may enter through an endpoint but from there is routed through the mesh normally. Therefore, it's not an SSL Endpoint's associated app that decides where a request goes, but rather the incoming domain that's been CNAME'd to the endpoint.
+Requests coming through an SSL Endpoint follow the same rules as the rest of the platform--a request may enter through an endpoint but from there is routed through the mesh normally. Therefore, it's not an SSL Endpoint's associated app that decides where a request goes, but rather the incoming domain that's been CNAME'd to the endpoint.
 
 A savvy developer can take advantage of this behavior to allow a single SSL Endpoint to route to any number of Heroku apps. For the connection to stay secure, the cert uploaded to the endpoint needs to be signed for any domains that you intended for use for it, but even a [free cert from StartCom](http://www.startcom.org/) allows two domains to be included without any special verification. A wildcard certificate (i.e. `*.mutelight.org`) will secure an entire stack of apps deployed into the Heroku cloud.
 

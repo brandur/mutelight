@@ -151,9 +151,9 @@ else
 fi 
 ```
 
-<span class="addendum">Edit (2011/04/01) &mdash;</span> added new script logic so that defunct sessions are killed before starting a new one. Defunct sessions are left behind when tmux isn't quit explicitly.
+<span class="addendum">Edit (2011/04/01) --</span> added new script logic so that defunct sessions are killed before starting a new one. Defunct sessions are left behind when tmux isn't quit explicitly.
 
-<span class="addendum">Edit (2011/07/21) &mdash;</span> added configuration and the `tmx` script to my [tmux-extra repository](https://github.com/brandur/tmux-extra) on GitHub for more convenient access.
+<span class="addendum">Edit (2011/07/21) --</span> added configuration and the `tmx` script to my [tmux-extra repository](https://github.com/brandur/tmux-extra) on GitHub for more convenient access.
 
 ### Complete .tmux.conf
 

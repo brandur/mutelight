@@ -14,4 +14,4 @@ Even giving Microsoft the benefit of the doubt by assuming that they had their r
 
 On a positive note, .NET 4.0 is really shaping up to be an outstanding release. With the addition of `ISet`, [tuples](/articles/finally-tuples-in-c-sharp.html), [optional/named parameters and co-variance](/articles/new-features-in-c-sharp-4.html), it seems like Microsoft is really focussing on fixing some of their previous omissions.
 
-<span class="addendum">Addendeum &mdash;</span> Did anyone else encapsulate `Dictionary` to roll their own set implementation? I ended up using mine all the way up until `HashSet` walked onto the scene in 3.0.</p>
+<span class="addendum">Addendeum --</span> Did anyone else encapsulate `Dictionary` to roll their own set implementation? I ended up using mine all the way up until `HashSet` walked onto the scene in 3.0.</p>

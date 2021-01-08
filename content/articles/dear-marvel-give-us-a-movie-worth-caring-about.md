@@ -18,4 +18,4 @@ I won't criticize it too much because First Class was decent. Just like Thor and
 
 Watching the Dark Knight, I saw heroes that I cared for, villains with intense depth, and scenes that truly moved me. The source material exists for the Marvel universe to do the same, but they'd need to embrace the idea of producing something other than a simplistic popcorn thriller. I think it's time.
 
-<p class="footnote" id="fn1"><a href="#fnr1"><sup>1</sup></a> "I believe that true focus lies somewhere between rage and serenity." &mdash; Xavier</p>
+<p class="footnote" id="fn1"><a href="#fnr1"><sup>1</sup></a> "I believe that true focus lies somewhere between rage and serenity." -- Xavier</p>

@@ -6,7 +6,7 @@ tiny_slug = "17"
 title = "How to Host a WPF Control in a WinForms Application"
 +++
 
-As people start making the jump from Windows Forms to WPF, many will hit an intermediate phase where it'll be useful to use WPF components in WinForms and vice-versa. Unfortunately, the two frameworks are not directly compatible because WPF uses `Control` under `System.Windows.Controls` while WinForms uses `Control` under `System.Windows.Forms` &mdash; and in terms of class hierarchies, the two `Control` classes are completely unrelated.
+As people start making the jump from Windows Forms to WPF, many will hit an intermediate phase where it'll be useful to use WPF components in WinForms and vice-versa. Unfortunately, the two frameworks are not directly compatible because WPF uses `Control` under `System.Windows.Controls` while WinForms uses `Control` under `System.Windows.Forms` -- and in terms of class hierarchies, the two `Control` classes are completely unrelated.
 
 Luckily, Microsoft has had the good sense to give us a workaround. A WinForms application can contain a WPF control by putting the WPF control into an instance of `ElementHost`, a class deriving WinForms' `Control`, and then adding the host to a control collection normally:
 

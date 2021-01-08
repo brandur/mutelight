@@ -20,4 +20,4 @@ Android has done everything I wanted for some time: Gmail integration, Google Re
 
 Now for a surprise: this entire post was typed via Swype! Just kidding. I like Swype but I'm not crazy.
 
-<span class="addendum">Edit (2010/12/19) &mdash;</span> added [Swype for advanced users](http://mutelight.org/articles/swype-for-advanced-users.html)
+<span class="addendum">Edit (2010/12/19) --</span> added [Swype for advanced users](http://mutelight.org/articles/swype-for-advanced-users.html)

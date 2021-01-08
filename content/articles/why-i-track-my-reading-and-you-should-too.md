@@ -11,7 +11,7 @@ I recently launched a new side project for tracking [my book history](http://bra
 Referrals
 ---------
 
-Often when speaking to friends we'll remember an outstanding book we've read that relates to the subject of conversation that we'd like to recommend. The problem for those of us with poor memories or who go through a lot of books, that title and author name might be difficult to recall&mdash;even if it's on the tip of the tongue. A reading list will save these situations, enabling easy lookup and referral.
+Often when speaking to friends we'll remember an outstanding book we've read that relates to the subject of conversation that we'd like to recommend. The problem for those of us with poor memories or who go through a lot of books, that title and author name might be difficult to recall--even if it's on the tip of the tongue. A reading list will save these situations, enabling easy lookup and referral.
 
 Memory
 ------

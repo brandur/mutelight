@@ -10,7 +10,7 @@ A few months back, I started running the lean Archlinux build that I've been usi
 
 Everything was perfect ... except for one aspect: the clipboard. Its behavior was utterly perplexing: I could select text and middle-click (or `Shift-Insert`) it most places I wanted, but I could only copy _out_ of Chromium; while pasting it seemed to only respect text that had been copied from itself. Vim was even worse, even with `set clipboard=unnamed` it didn't seem to play nice with anything else.
 
-This was pretty frustrating&mdash;the clipboard's importance in the everyday workflow really can't be understated. So what was the problem? To understand, we have to know a little more about the X clipboard.
+This was pretty frustrating--the clipboard's importance in the everyday workflow really can't be understated. So what was the problem? To understand, we have to know a little more about the X clipboard.
 
 The X Clipboard
 ---------------

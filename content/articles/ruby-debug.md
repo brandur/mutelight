@@ -47,4 +47,4 @@ It might seem like the debugger would start in the `d` method rather than where 
 
 In a classic case of open-source overkill, I've extracted the pattern described above into a trivial gem called [d2](https://github.com/brandur/d2). Throw it in your Gemfile, make sure that your project is either using `Bundler.setup` or including `require 'd2'` somewhere, then use `d2` somewhere to trigger the debugger.
 
-<span class="addendum">Aside &mdash;</span> A slightly interesting Ruby tidbit related to the code above is that we use `rescue LoadError` because a generic `rescue` only catches `StandardError` exceptions. `LoadError` is derived from a different hierarchy headed by `ScriptError`.
+<span class="addendum">Aside --</span> A slightly interesting Ruby tidbit related to the code above is that we use `rescue LoadError` because a generic `rescue` only catches `StandardError` exceptions. `LoadError` is derived from a different hierarchy headed by `ScriptError`.

@@ -57,8 +57,8 @@ gem 'haml' # Includes Sass
 
 Run `bundle install .` (from Cygwin). Two dependencies are now installed:
 
-* **Albacore** &mdash; provides a set of .NET build tasks for Rake
-* **Haml** &mdash; allows us to access the [Sass](http://sass-lang.com/) compiler, which I use for my ASP.NET development for a more literate CSS
+* **Albacore** -- provides a set of .NET build tasks for Rake
+* **Haml** -- allows us to access the [Sass](http://sass-lang.com/) compiler, which I use for my ASP.NET development for a more literate CSS
 
 Our Rakefile
 ------------
@@ -148,7 +148,7 @@ end
 
 Run `rake -T` for a list of available tasks. Here are the important ones:
 
-* `rake build` &mdash; build the project
-* `rake build:release` &mdash; build the project with release configuration
-* `rake test` &mdash; run our test suite (I'm using the MSTest framework here)
-* `rake server` &mdash; start a development server pointing to our project for ASP.NET
+* `rake build` -- build the project
+* `rake build:release` -- build the project with release configuration
+* `rake test` -- run our test suite (I'm using the MSTest framework here)
+* `rake server` -- start a development server pointing to our project for ASP.NET
