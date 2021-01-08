@@ -1,0 +1,9 @@
+= content main
+  h1 Articles
+  ul.article
+    {{range .TopArticles}}
+      li
+        a href={{.Slug}} {{.Title}}
+        span.alternate
+          |  &mdash; {{FormatTime .PublishedAt}}
+    {{end}}

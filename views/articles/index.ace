@@ -1,0 +1,12 @@
+= content main
+  h1 All Articles
+  {{range .ArticlesByYear}}
+    h2 {{.Year}}
+    ul.article
+      {{range .Articles}}
+        li
+          a href={{.Slug}} {{.Title}}
+          span.alternate
+            |  &mdash; {{FormatTime .PublishedAt}}
+      {{end}}
+  {{end}}

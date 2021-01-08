@@ -1,0 +1,32 @@
+= content main
+  article
+    / # @todo: either get series back, or get rid of them
+    / - if @article[:series]
+      .series 
+        span.series_title= link_to @article.series.title, @article.series, "data-pjax" => "#content"
+        | : Article ##{@article.series_position} in the series
+    {{with .Article}}
+      h1 {{.Title}}
+      .content
+        {{HTML .Content}}
+        p.meta
+          | Posted on 
+          strong {{FormatTime .PublishedAt}}
+          {{if .Location}}
+            |  from 
+            strong {{.Location}}
+          {{end}}
+    {{end}}
+
+  / Would have to refactor article rendering into two passes to get this
+  / working again. Currently, articles are read and rendered at the same time
+  / which means that no one article is guaranteed access to any other. The
+  / complete ordered list isn't available until every article is done.
+
+  / h2 Newest Articles
+  / ul.article
+    - Article.index.limit(3).where("id <> ?", @article.id).each do |article|
+      li
+        == link_to article.title, article, "data-pjax" => "#content"
+        span.alternate
+          |  &mdash; #{{article.published_at.strftime('%B %e, %Y')}}

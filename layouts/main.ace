@@ -1,0 +1,62 @@
+= doctype html
+
+html lang="en"
+  head
+    {{if ne .Title ""}}
+      title {{.Title}}{{.TitleSuffix}}
+    {{else}}
+      = yield title
+    {{end}}
+
+    meta content="text/html; charset=utf-8" http-equiv="Content-Type"
+    meta name="author" content="Brandur Leach"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    link rel="icon" type="image/png" href="/assets/images/icon.png"
+    link rel="shortcut icon" type="image/png" href="/assets/images/icon.png"
+    link href="/articles.atom" rel="alternate" title="Articles{{.TitleSuffix}}" type="application/atom+xml"
+
+    link href="/assets/{{.Release}}/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css"
+    link href="/assets/{{.Release}}/stylesheets/prism.css" media="screen" rel="stylesheet" type="text/css"
+    script src="/assets/{{.Release}}/stylesheets/prism.js" type="text/javascript"
+
+  body
+    #radial
+    #shift
+      #wrapper
+        header
+          #header
+            a href="/"
+              span
+            strong.hide
+              a href="/" Mutelight
+        #content
+          = yield main
+        footer
+          #about
+            h2
+              | About
+            p.important 
+            p.important My name is <a href="https://brandur.org">Brandur</a>. I'm a polyglot software engineer and part-time designer working at <a href="https://heroku.com">Heroku</a> in San Francisco, California. I'm a Canadian expat. My name is Icelandic. Drop me a line at <a href="mailto:brandur@mutelight.org">brandur@mutelight.org</a>.
+            | Aside from technology, I'm interested in energy and how it relates to our society, travel, longboarding, muay thai, symphonic metal, and the guitar.
+            {{if .Article}}
+              p.important If you liked this article, consider <a href="https://twitter.com/brandur">finding me on Twitter</a>.
+            {{else}}
+              p.important <a href="https://twitter.com/brandur">I'm on Twitter</a>.
+            {{end}}
+          nav
+            #nav
+              span.item Navigation &rarr;
+              span.item
+                a href="/" Home
+              span.item
+                a href="/archive" Archive
+              span.item
+                a href="https://github.com/brandur/mutelight" Source
+              span.item.rss
+                a href="/articles.atom" title="Subscribe to Atom feed"
+                  img src="/assets/images/rss.png"
+        br
+        br
+        br
+    = include views/_analytics .
