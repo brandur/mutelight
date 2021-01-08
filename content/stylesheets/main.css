@@ -177,7 +177,7 @@ strong {
   background: black;
   line-height: 1.4;
   border: 1px solid var(--border_color);
-  var(--highlight_color)-space: pre-wrap;
+  overflow: auto;
 }
 
 #shift #wrapper .content code {

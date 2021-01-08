@@ -33,7 +33,8 @@ end
 By specifying `Content-Type: application/json`, JSON-encoded data can be sent to and read by the API:
 
 ```
-curl -X POST https://api.example.com/resources -d '{"name":"my-resource"}' -H "Content-Type: application/json"
+curl -X POST https://api.example.com/resources \
+    -d '{"name":"my-resource"}' -H "Content-Type: application/json"
 ```
 
 The more traditional method for encoding POSTs is to use the `application/x-www-form-urlencoded` MIME type which looks like `company=heroku&num_founders=3` and is sent in directly as part of the request body. Rack will decode form-encoded bodies by default and add them to the `params` hash, so our API easily falls back to this:
