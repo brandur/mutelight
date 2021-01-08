@@ -14,17 +14,17 @@ Here's a portrayal of what a fairly well-answered question on <acronym title="St
 > 
 > **Responses:**
 > 
-> 1. <img alt="Stack Overflow accepted answer checkmark" src="https://d25zpof2afwnhk.cloudfront.net/the-bane-of-stack-overflow/green_checkmark.png" class="inline" /> &lt;Top-rated response, usually well-written and really good&gt;
+> 1. <img alt="Stack Overflow accepted answer checkmark" src="/assets/images/articles/the-bane-of-stack-overflow/green_checkmark.png" class="inline" /> (Top-rated response, usually well-written and really good)
 > 
-> 2. &lt;Good response&gt;
+> 2. (Good response)
 > 
-> 3. &lt;Acceptable response&gt;
+> 3. (Acceptable response)
 > 
-> 4. *You should ....* &lt;poor/irrelevant advice&gt;
+> 4. *You should ....* (poor/irrelevant advice)
 > 
-> 5. *I've always found that ...* &lt;poor/irrelevant advice&gt;
+> 5. *I've always found that ...* (poor/irrelevant advice)
 > 
-> 6. *I think the best way ...* &lt;poor/irrelevant advice&gt;
+> 6. *I think the best way ...* (poor/irrelevant advice)
 
 This works well because the best response is front row centre, and hard to miss. There will be a large set of poor answers, but that's a given, this is the Internet after all! The important part is that the poor responses get muscled out by the good ones and move out of sight.
 
@@ -34,9 +34,9 @@ The problem only really establishes itself on a less-popular and more difficult 
 > 
 > **Responses:**
 > 
-> 1. *You should ....* &lt;poor/irrelevant advice&gt;
+> 1. *You should ....* (poor/irrelevant advice)
 > 
-> 2. *I've always found that ...* &lt;poor/irrelevant advice&gt;
+> 2. *I've always found that ...* (poor/irrelevant advice)
 
 Karma on SO is a valuable resource, far moreso than most other social sites online, and just for that reason people will spend more time and effort acquiring it.
 

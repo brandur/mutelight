@@ -37,7 +37,7 @@ Follow these steps to get up and running:
 4. Under _Options_ &rarr; _Internal Filters_ &rarr; _Source Filters_, uncheck the options for _Matroska_. We do this to allow Haali's Media Splitter to read our MKV files, which is faster than MPC-HC's reader.
 
 <div class="figure">
-    <a href="https://d25zpof2afwnhk.cloudfront.net/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/mpc-hc-options-vmr9.png" title="Link to full-size image"><img src="https://d25zpof2afwnhk.cloudfront.net/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/mpc-hc-options-vmr9-small.png" alt="Settings to correctly enable VMR9 in Media Player Classic Homecinema" /></a>
+    <a href="/assets/images/articles/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/mpc-hc-options-vmr9.png" title="Link to full-size image"><img src="/assets/images/articles/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/mpc-hc-options-vmr9-small.png" alt="Settings to correctly enable VMR9 in Media Player Classic Homecinema" /></a>
     <p><strong>Fig. 1:</strong> <em>MPC-HC output settings for hardware-accelerated VMR9 playback in Windows</em></p>
 </div>
 
@@ -49,7 +49,7 @@ This one is easy: use [Plex](http://plexapp.com/). Plex (also known as Plexapp) 
 Another option, but one I've admittedly never had much luck with, is to use VLC. VLC will be too slow to play HD video out of the box, but you can configure it to skip its x264 loop filter as shown in Fig. 2 below (remember to select the _All_ option from the radio buttons in the bottom left or you won't see these settings). Depending on your processor, this may speed up VLC enough to make it usable.
 
 <div class="figure">
-    <a href="https://d25zpof2afwnhk.cloudfront.net/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/vlc-options-skip-loop-filter.png" title="Link to full-size image"><img src="https://d25zpof2afwnhk.cloudfront.net/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/vlc-options-skip-loop-filter-small.png" alt="Settings to get better VLC performance on Mac OSX by skipping the loop filter" /></a>
+    <a href="/assets/images/articles/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/vlc-options-skip-loop-filter.png" title="Link to full-size image"><img src="/assets/images/articles/how-to-play-1080p-hd-video-encoded-with-x264-in-an-mkv-container/vlc-options-skip-loop-filter-small.png" alt="Settings to get better VLC performance on Mac OSX by skipping the loop filter" /></a>
     <p><strong>Fig. 2:</strong> <em>VLC settings for skip loop filter on Mac OSX</em></p>
 </div>
 

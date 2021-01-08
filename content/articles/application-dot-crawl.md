@@ -23,7 +23,7 @@ This insight comes from my recent experience installing Expression Blend 3. I'd 
 Close to 100% of a single core was eaten up for the entire half-hour install process of Blend. The slowdown was so extreme that my mouse cursor skipped around the screen in 20 pixel increments as I made futile attempts to continue my other work. For the record, I'm running a Core 2 E8400 @ 3.00 GHz with 4 GB of memory.
 
 <div class="figure">
-    <a href="https://d25zpof2afwnhk.cloudfront.net/application-dot-crawl/cpu-eater-3.png" title="Link to full-size image"><img src="https://d25zpof2afwnhk.cloudfront.net/application-dot-crawl/cpu-eater-3-small.png" alt="Sus microprocessorius, more widely known as the common CPU hog, in its natural habitat" /></a>
+    <a href="/assets/images/articles/application-dot-crawl/cpu-eater-3.png" title="Link to full-size image"><img src="/assets/images/articles/application-dot-crawl/cpu-eater-3-small.png" alt="Sus microprocessorius, more widely known as the common CPU hog, in its natural habitat" /></a>
     <p><strong>Fig. 1:</strong> <em>Sus microprocessorius,</em> more widely known as the common CPU hog, in its natural habitat</p>
 </div>
 

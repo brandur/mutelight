@@ -16,7 +16,7 @@ Having recently investigated a variety of the top home theatre packages, I immed
 
 This guide will walk you through the basic steps to get XBMC up and running at its maximum potential (some steps are specific to the Revo).
 
-<a href="http://www.flickr.com/photos/brandurleach/5299243780/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_00.thumb.jpg" alt="Screenshot of episode listing" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_00.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_00.thumb.jpg" alt="Screenshot of episode listing" /></a>
 
 Ubuntu
 ------
@@ -102,20 +102,20 @@ Library mode is not default, but it is generally a better browsing experience, e
 
 After returning to the main menu, there should be a new "Movies" section. A TV shows source can be added as well to bring up a "TV Shows" section.
 
-<a href="http://www.flickr.com/photos/brandurleach/5299226248/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_01.thumb.jpg" alt="Screenshot of main menu" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_01.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_01.thumb.jpg" alt="Screenshot of main menu" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299226252/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_02.thumb.jpg" alt="Screenshot of movie information" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_02.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_02.thumb.jpg" alt="Screenshot of movie information" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299226260/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_03.thumb.jpg" alt="Screenshot of movie playing" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_03.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_03.thumb.jpg" alt="Screenshot of movie playing" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299226264/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_04.thumb.jpg" alt="Screenshot of movie listing" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_04.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_04.thumb.jpg" alt="Screenshot of movie listing" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299226274/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_05.thumb.jpg" alt="Screenshot of TV listing" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_05.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_05.thumb.jpg" alt="Screenshot of TV listing" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299226280/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_06.thumb.jpg" alt="Screenshot of TV season listing" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_06.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_06.thumb.jpg" alt="Screenshot of TV season listing" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299243786/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_07.thumb.jpg" alt="Screenshot of episode information" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_07.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_07.thumb.jpg" alt="Screenshot of episode information" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299243790/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_08.thumb.jpg" alt="Screenshot of settings" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_08.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_08.thumb.jpg" alt="Screenshot of settings" /></a>
 
-<a href="http://www.flickr.com/photos/brandurleach/5299243796/"><img src="https://d25zpof2afwnhk.cloudfront.net/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_09.thumb.jpg" alt="Screenshot of appearance settings" /></a>
+<a href="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_09.png"><img src="/assets/images/articles/guide-to-installing-xbmc-and-ubuntu-on-an-acer-revo/xbmc_aeon_09.thumb.jpg" alt="Screenshot of appearance settings" /></a>

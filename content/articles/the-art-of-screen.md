@@ -15,7 +15,7 @@ The power of screen continues to amaze me: today I stumbled across a feature by 
 
 Turn activity monitoring on for your current window using `C-a M`. Using this same shortcut again will toggle activity monitoring back to off. Now when something happens in this window, Screen will flash a message across its status bar, and display an `@` next to its title.
 
-<img src="https://d25zpof2afwnhk.cloudfront.net/the-art-of-screen/screen-status.png" alt="Notice the @ next to a modified window's title" />
+<img src="/assets/images/articles/the-art-of-screen/screen-status.png" alt="Notice the @ next to a modified window's title" />
 
 The message displayed when something occurs can be changed using `activity <message>` in your configuration file. Change it to an empty string (`""`) to kill the message completely.
 
