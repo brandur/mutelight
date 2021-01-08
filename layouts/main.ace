@@ -18,7 +18,7 @@ html lang="en"
 
     link href="/assets/{{.Release}}/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css"
     link href="/assets/{{.Release}}/stylesheets/prism.css" media="screen" rel="stylesheet" type="text/css"
-    script src="/assets/{{.Release}}/stylesheets/prism.js" type="text/javascript"
+    script src="/assets/{{.Release}}/javascripts/prism.js" type="text/javascript"
 
   body
     #radial
