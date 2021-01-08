@@ -257,6 +257,16 @@ func build(c *modulir.Context) []error {
 		})
 	}
 
+	//
+	// Redirects.txt
+	//
+
+	{
+		c.AddJob("redirects.txt", func() (bool, error) {
+			return renderRedirectsTxt(c, articles, articlesChanged)
+		})
+	}
+
 	return nil
 }
 
@@ -286,6 +296,14 @@ type Article struct {
 	// Slug is a unique identifier for the article that also helps determine
 	// where it's addressable by URL.
 	Slug string `toml:"-"`
+
+	// TinySlug is a short URL assigned to the article at `/a/<tiny slug>`
+	// which redirects to the main article.
+	//
+	// This was almost certainly something that was never needed, but I added
+	// it way back near 2010 when I was obsessed with URL shorteners, one of
+	// the internet's worst ideas.
+	TinySlug string `toml:"tiny_slug"`
 
 	// Title is the article's title.
 	Title string `toml:"title"`
@@ -534,6 +552,28 @@ func renderIndex(c *modulir.Context, articles []*Article, articlesChanged bool) 
 
 	return true, mace.RenderFile(c, ucommon.MainLayout, ucommon.ViewsDir+"/index.ace",
 		c.TargetDir+"/index.html", getAceOptions(viewsChanged), locals)
+}
+
+func renderRedirectsTxt(c *modulir.Context, articles []*Article, articlesChanged bool) (bool, error) {
+	if !articlesChanged {
+		return false, nil
+	}
+
+	outFile, err := os.Create(c.TargetDir + "/redirects.txt")
+	if err != nil {
+		return true, err
+	}
+	defer outFile.Close()
+
+	for _, article := range articles {
+		if article.TinySlug == "" {
+			continue
+		}
+
+		outFile.WriteString(fmt.Sprintf("/a/%s /%s\n", article.TinySlug, article.Slug))
+	}
+
+	return true, nil
 }
 
 func renderRobotsTxt(c *modulir.Context) (bool, error) {
