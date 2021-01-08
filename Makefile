@@ -79,10 +79,6 @@ ifdef AWS_ACCESS_KEY_ID
 	#    Golang's http.FileServer will respect them as indexes.
 	find $(TARGET_DIR) -name index.html | egrep -v '$(TARGET_DIR)/index.html' | sed "s|^$(TARGET_DIR)/||" | xargs -I{} -n1 dirname {} | xargs -I{} -n1 aws s3 cp $(TARGET_DIR)/{}/index.html s3://$(S3_BUCKET)/{} --acl public-read --cache-control max-age=$(SHORT_TTL) --content-type text/html
 
-	@echo "\n=== Syncing redirects.txt (tiny URLs)\n"
-
-	cat public/redirects.txt | xargs -L1 bash -c 'echo "$$0 --> $$1" && echo "Should redirect to: $$1" | aws s3 cp - s3://$(S3_BUCKET)$$0 --acl public-read --metadata "Website-Redirect-Location=$$1"'
-
 	@echo "\n=== Fixing robots.txt content type\n"
 
 	# Give robots.txt (if it exists) a Content-Type of text/plain. Twitter is

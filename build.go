@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"io/ioutil"
 	"os"
 	"path"
 	"path/filepath"
@@ -151,7 +152,7 @@ func build(c *modulir.Context) []error {
 
 	{
 		commonDirs := []string{
-			c.TargetDir + "/articles",
+			c.TargetDir + "/a",
 			versionedAssetsDir,
 		}
 		for _, dir := range commonDirs {
@@ -254,16 +255,6 @@ func build(c *modulir.Context) []error {
 	{
 		c.AddJob("articles feed", func() (bool, error) {
 			return renderArticlesFeed(c, articles, articlesChanged)
-		})
-	}
-
-	//
-	// Redirects.txt
-	//
-
-	{
-		c.AddJob("redirects.txt", func() (bool, error) {
-			return renderRedirectsTxt(c, articles, articlesChanged)
 		})
 	}
 
@@ -439,6 +430,24 @@ func renderArticle(c *modulir.Context, source string, articles *[]*Article, arti
 		return true, err
 	}
 
+	// Ideally, this would be an actual redirect, but the combination of S3 +
+	// CloudFront makes those somewhat difficult. Also, these should never
+	// really get used from anywhere anymore so it doesn't actually matter that
+	// much.
+	if article.TinySlug != "" {
+		err := ioutil.WriteFile(
+			path.Join(c.TargetDir, "a", article.TinySlug),
+			[]byte(fmt.Sprintf(
+				`<!DOCTYPE html><html>please click through to: <strong><a href="/%s">/%s</a></strong></html>`,
+				article.Slug, article.Slug,
+			)),
+			0755,
+		)
+		if err != nil {
+			return true, err
+		}
+	}
+
 	mu.Lock()
 	insertOrReplaceArticle(articles, &article)
 	*articlesChanged = true
@@ -552,28 +561,6 @@ func renderIndex(c *modulir.Context, articles []*Article, articlesChanged bool) 
 
 	return true, mace.RenderFile(c, ucommon.MainLayout, ucommon.ViewsDir+"/index.ace",
 		c.TargetDir+"/index.html", getAceOptions(viewsChanged), locals)
-}
-
-func renderRedirectsTxt(c *modulir.Context, articles []*Article, articlesChanged bool) (bool, error) {
-	if !articlesChanged {
-		return false, nil
-	}
-
-	outFile, err := os.Create(c.TargetDir + "/redirects.txt")
-	if err != nil {
-		return true, err
-	}
-	defer outFile.Close()
-
-	for _, article := range articles {
-		if article.TinySlug == "" {
-			continue
-		}
-
-		outFile.WriteString(fmt.Sprintf("/a/%s /%s\n", article.TinySlug, article.Slug))
-	}
-
-	return true, nil
 }
 
 func renderRobotsTxt(c *modulir.Context) (bool, error) {
