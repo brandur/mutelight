@@ -81,8 +81,7 @@ ifdef AWS_ACCESS_KEY_ID
 
 	@echo "\n=== Syncing redirects.txt (tiny URLs)\n"
 
-	touch /tmp/empty
-	cat public/redirects.txt | xargs -L1 bash -c 'aws s3 cp /tmp/empty s3://$(S3_BUCKET)$$0 --acl public-read --metadata "x-amz-website-redirect-location=$$1"'
+	cat public/redirects.txt | xargs -L1 bash -c 'echo "$$0 --> $$1" && echo "" | aws s3 cp - s3://$(S3_BUCKET)$$0 --acl public-read --website-redirect "$$1"'
 
 	@echo "\n=== Fixing robots.txt content type\n"
 
