@@ -11,10 +11,10 @@
         {{HTML .Content}}
         p.meta
           | Posted on 
-          strong {{FormatTime .PublishedAt}}
+          span.highlight {{FormatTime .PublishedAt}}
           {{if .Location}}
             |  from 
-            strong {{.Location}}
+            span.highlight {{.Location}}
           {{end}}
     {{end}}
 
@@ -28,5 +28,5 @@
     - Article.index.limit(3).where("id <> ?", @article.id).each do |article|
       li
         == link_to article.title, article, "data-pjax" => "#content"
-        span.alternate
+        span.publish_date
           |  &mdash; #{{article.published_at.strftime('%B %e, %Y')}}

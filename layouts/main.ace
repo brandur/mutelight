@@ -36,13 +36,13 @@ html lang="en"
           #about
             h2
               | About
-            p.important 
-            p.important My name is <a href="https://brandur.org">Brandur</a>. I'm a polyglot software engineer and part-time designer working at <a href="https://heroku.com">Heroku</a> in San Francisco, California. I'm a Canadian expat. My name is Icelandic. Drop me a line at <a href="mailto:brandur@mutelight.org">brandur@mutelight.org</a>.
+            p.important_text 
+            p.important_text My name is <a href="https://brandur.org">Brandur</a>. I'm a polyglot software engineer and part-time designer working at <a href="https://heroku.com">Heroku</a> in San Francisco, California. I'm a Canadian expat. My name is Icelandic. Drop me a line at <a href="mailto:brandur@mutelight.org">brandur@mutelight.org</a>.
             | Aside from technology, I'm interested in energy and how it relates to our society, travel, longboarding, muay thai, symphonic metal, and the guitar.
             {{if .Article}}
-              p.important If you liked this article, consider <a href="https://twitter.com/brandur">finding me on Twitter</a>.
+              p.important_text If you liked this article, consider <a href="https://twitter.com/brandur">finding me on Twitter</a>.
             {{else}}
-              p.important <a href="https://twitter.com/brandur">I'm on Twitter</a>.
+              p.important_text <a href="https://twitter.com/brandur">I'm on Twitter</a>.
             {{end}}
           nav
             #nav

@@ -1,5 +1,5 @@
 :root {
-    --font_family: "eb garamond", "palatino linotype", palatino, "times new roman", serif;
+    --font_family: georgia, serif;
     --font_family_headers: georgia, serif;
     --font_family_monospace: Monaco, "Lucida Console", "Bitstream Vera Sans Mono", Courier, monospace;
     --font_family_sans_serif: tahoma, sans-serif;
@@ -57,7 +57,7 @@ body {
    */
   font-size: 105%;
 
-  line-height: 1.6;
+  line-height: 1.5;
 
   font-weight: 100;
   text-shadow: 0 0 2px black;
@@ -92,6 +92,15 @@ strong {
   clear: both;
 }
 
+.highlight {
+  color: var(--highlight_color);
+}
+
+.publish_date {
+  color: var(--tertiary_color);
+  font-size: 0.9rem;
+}
+
 #radial {
   background: transparent url("/assets/images/radial.png") no-repeat scroll center bottom;
   width: 100%;
@@ -108,34 +117,35 @@ strong {
   max-width: 650px;
   min-width: 478px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+#shift #wrapper h1, #shift #wrapper h2, #shift #wrapper h3 {
+  color: var(--header_color);
+  font-family: var(--font_family_headers);
+}
+
+#shift #wrapper h1 a, #shift #wrapper h2 a, #shift #wrapper h3 a {
+  color: var(--header_color);
+  text-decoration: none;
 }
 
 #shift #wrapper h1 {
-  color: var(--header_color);
-  font-family: var(--font_family_headers);
   font-size: 1.5rem;
   font-weight: normal;
   padding: 0 12px;
 }
 
 #shift #wrapper h2 {
-  color: var(--header_color);
-  font-family: var(--font_family_headers);
   font-size: 1.3rem;
   font-weight: normal;
-  padding: 0 12px;
+  margin: 30px 0 -5px 0;
 }
 
 #shift #wrapper h3 {
-  color: var(--header_color);
-  font-family: var(--font_family_headers);
   font-size: 1rem;
-  font-weight: bold;
-  padding: 0 12px;
-}
-
-#shift #wrapper .alternate {
-  color: var(--tertiary_color);
+  font-weight: normal;
+  margin: 25px 0 -5px 0;
 }
 
 #shift #wrapper .hide {
@@ -146,33 +156,32 @@ strong {
   color: var(--highlight_color);
 }
 
-#shift #wrapper .important,#shift #wrapper .subheading {
+#shift #wrapper .important_text, #shift #wrapper .subheading {
   color: var(--highlight_color);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 #shift #wrapper .content {
   hyphens: auto;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
-  line-height: 1.4em;
   border-bottom: 2px solid var(--separator_color);
   border-top: 2px solid var(--separator_color);
   margin: 0 7px;
   padding: 0 5px;
 }
 
-#shift #wrapper .content code,#shift #wrapper .content pre {
+#shift #wrapper .content code, #shift #wrapper .content pre {
   font-family: var(--font_family_monospace);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   background: black;
-  line-height: 1.3em;
+  line-height: 1.4;
   border: 1px solid var(--border_color);
   var(--highlight_color)-space: pre-wrap;
 }
 
 #shift #wrapper .content code {
-  padding: 3px 3px 2px 3px;
+  padding: 6px 8px;
 }
 
 #shift #wrapper .content pre {
@@ -347,30 +356,30 @@ strong {
   height: 100%;
 }
 
-#shift #wrapper ol.article,#shift #wrapper ul.article {
-  margin: 0 10px;
+#shift #wrapper ol.article, #shift #wrapper ul.article {
+  margin: 10px 10px;
   padding: 0 0 10px 0;
   border-top: 1px solid var(--separator_color);
 }
 
-#shift #wrapper ol.article li,#shift #wrapper ul.article li {
+#shift #wrapper ol.article li, #shift #wrapper ul.article li {
   padding: 7px 10px;
   border-bottom: 1px solid var(--separator_color);
 }
 
-#shift #wrapper ol.article li a,#shift #wrapper ul.article li a {
+#shift #wrapper ol.article li a, #shift #wrapper ul.article li a {
   color: #c9c9c8;
 }
 
-#shift #wrapper ol.article li a:link,#shift #wrapper ul.article li a:link {
+#shift #wrapper ol.article li a:link, #shift #wrapper ul.article li a:link {
   text-decoration: none;
 }
 
-#shift #wrapper ol.article li a:visited,#shift #wrapper ul.article li a:visited {
+#shift #wrapper ol.article li a:visited, #shift #wrapper ul.article li a:visited {
   text-decoration: none;
 }
 
-#shift #wrapper ol.article li a:hover,#shift #wrapper ul.article li a:hover {
+#shift #wrapper ol.article li a:hover, #shift #wrapper ul.article li a:hover {
   text-decoration: underline;
 }
 

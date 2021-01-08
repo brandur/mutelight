@@ -4,6 +4,6 @@
     {{range .TopArticles}}
       li
         a href={{.Slug}} {{.Title}}
-        span.alternate
+        span.publish_date
           |  &mdash; {{FormatTime .PublishedAt}}
     {{end}}
