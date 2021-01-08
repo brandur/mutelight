@@ -17,7 +17,7 @@ When first planning out my time at SXSW, I was a little worried when I saw that 
 
 The only piece that disappointed me were the badges themselves, which were both cheaply designed and cheaply printed. My major complains were that my picture was cut off, and that I couldn't opt to have any alternate information on it (Twitter handle for example) without adding it myself with a marker. A decent designer would've had a great opportunity to make these badges into real works of art: big names readable from across the room, a high quality photo, company logos, and so on. I'd probably add a fun/interactive component if I built them: personalized QR-esque codes that could be scanned with the SXSW mobile apps.
 
-<a href="http://www.flickr.com/photos/brandurleach/5518093354/"><img src="https://farm6.static.flickr.com/5171/5518093354_8e389682c4.jpg" alt="SXSW 2011 badge" /></a>
+<a href="/assets/images/articles/the-south-by-southwest-experience/sxsw-badge-full.jpg"><img src="/assets/images/articles/the-south-by-southwest-experience/sxsw-badge.jpg" alt="SXSW 2011 badge" /></a>
 
 People
 ------
