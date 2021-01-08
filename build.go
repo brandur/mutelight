@@ -403,7 +403,7 @@ func renderArticle(c *modulir.Context, source string, articles *[]*Article, arti
 
 	article.Slug = ucommon.ExtractSlug(source)
 
-	content, err := mmarkdownext.Render(string(data), nil)
+	content, err := mmarkdownext.Render(string(data), &mmarkdownext.RenderOptions{NoRetina: true})
 	if err != nil {
 		return true, err
 	}
