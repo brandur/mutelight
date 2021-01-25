@@ -3,4 +3,4 @@ export AWS_SECRET_ACCESS_KEY=
 export CLOUDFRONT_ID=
 export DRAFTS=true
 export MUTELIGHT_ENV=development
-export PORT=5008
+export PORT=5009
