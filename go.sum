@@ -27,6 +27,8 @@ github.com/brandur/modulir v0.0.0-20210106081857-5467443e5256 h1:yeGOsilXB/YUrjt
 github.com/brandur/modulir v0.0.0-20210106081857-5467443e5256/go.mod h1:BRHOfeIYFU0MDzaFY45fg2bDY77y+FjU1TRC782o+T4=
 github.com/brandur/modulir v0.0.0-20210108044009-222bb9a5c54f h1:j9toLyYUF7UCjUsuHf20y9XEWzWgutpXEfQDVP+lAzE=
 github.com/brandur/modulir v0.0.0-20210108044009-222bb9a5c54f/go.mod h1:BRHOfeIYFU0MDzaFY45fg2bDY77y+FjU1TRC782o+T4=
+github.com/brandur/modulir v0.0.0-20210220204702-6686f1c5248a h1:F1id8RC77TrcmLJ1Gz5ltOPWKofwEc2wMv0kiov6AcY=
+github.com/brandur/modulir v0.0.0-20210220204702-6686f1c5248a/go.mod h1:BRHOfeIYFU0MDzaFY45fg2bDY77y+FjU1TRC782o+T4=
 github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghfAqPWnc=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/coreos/bbolt v1.3.2/go.mod h1:iRUV2dpdMOn7Bo10OQBFzIJO9kkE559Wcmn+qkEiiKk=
@@ -261,6 +263,8 @@ golang.org/x/sys v0.0.0-20191026070338-33540a1f6037/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20210105210732-16f7687f5001 h1:/dSxr6gT0FNI1MO5WLJo8mTmItROeOKTkDn+7OwWBos=
 golang.org/x/sys v0.0.0-20210105210732-16f7687f5001/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20210225134936-a50acf3fe073 h1:8qxJSnu+7dRq6upnbntrmriWByIakBuct5OM/MdQC1M=
+golang.org/x/sys v0.0.0-20210225134936-a50acf3fe073/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 golang.org/x/text v0.3.1-0.20180807135948-17ff2d5776d2/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 golang.org/x/text v0.3.2/go.mod h1:bEr9sfX3Q8Zfm5fL9x+3itogRgK3+ptLWKqgva+5dAk=
