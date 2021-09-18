@@ -26,7 +26,7 @@ import (
 //////////////////////////////////////////////////////////////////////////////
 
 func main() {
-	var rootCmd = &cobra.Command{
+	rootCmd := &cobra.Command{
 		Use:   "mutelight",
 		Short: "Mutelight is a static site generator",
 		Long: strings.TrimSpace(`

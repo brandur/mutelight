@@ -388,7 +388,8 @@ func insertOrReplaceArticle(articles *[]*Article, article *Article) {
 	*articles = append(*articles, article)
 }
 
-func renderArticle(c *modulir.Context, source string, articles *[]*Article, articlesChanged *bool, mu *sync.Mutex) (bool, error) {
+func renderArticle(c *modulir.Context, source string,
+	articles *[]*Article, articlesChanged *bool, mu *sync.Mutex) (bool, error) {
 	sourceChanged := c.Changed(source)
 	viewsChanged := c.ChangedAny(append(
 		[]string{
@@ -437,16 +438,17 @@ func renderArticle(c *modulir.Context, source string, articles *[]*Article, arti
 	// really get used from anywhere anymore so it doesn't actually matter that
 	// much.
 	if article.TinySlug != "" {
+		filename := path.Join(c.TargetDir, "a", article.TinySlug)
 		err := ioutil.WriteFile(
-			path.Join(c.TargetDir, "a", article.TinySlug),
+			filename,
 			[]byte(fmt.Sprintf(
 				`<!DOCTYPE html><html>please click through to: <strong><a href="/%s">/%s</a></strong></html>`,
 				article.Slug, article.Slug,
 			)),
-			0755,
+			0o600,
 		)
 		if err != nil {
-			return true, err
+			return true, xerrors.Errorf("error writing file '%s': %w", filename, err)
 		}
 	}
 
@@ -488,7 +490,7 @@ func renderArticlesIndex(c *modulir.Context, articles []*Article, articlesChange
 		c.TargetDir+"/archive", getAceOptions(viewsChanged), locals)
 }
 
-func renderFeed(c *modulir.Context, slug, title string, articles []*Article) (bool, error) {
+func renderFeed(_ *modulir.Context, slug, title string, articles []*Article) (bool, error) {
 	filename := slug + ".atom"
 	title += ucommon.TitleSuffix
 
@@ -527,7 +529,7 @@ func renderFeed(c *modulir.Context, slug, title string, articles []*Article) (bo
 
 	f, err := os.Create(path.Join(conf.TargetDir, filename))
 	if err != nil {
-		return true, err
+		return true, xerrors.Errorf("error creating file '%s': %w", filename, err)
 	}
 	defer f.Close()
 
@@ -583,12 +585,13 @@ Disallow: /
 `
 	}
 
-	outFile, err := os.Create(c.TargetDir + "/robots.txt")
+	filename := c.TargetDir + "/robots.txt"
+	outFile, err := os.Create(filename)
 	if err != nil {
-		return true, err
+		return true, xerrors.Errorf("error creating file '%s': %w", filename, err)
 	}
 	if _, err := outFile.WriteString(content); err != nil {
-		return true, err
+		return true, xerrors.Errorf("error writing file '%s': %w", filename, err)
 	}
 	outFile.Close()
 
