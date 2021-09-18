@@ -7,11 +7,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/brandur/modulir"
 	"github.com/joeshaw/envdecode"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"golang.org/x/crypto/ssh/terminal"
+
+	"github.com/brandur/modulir"
 )
 
 //////////////////////////////////////////////////////////////////////////////

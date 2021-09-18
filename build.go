@@ -13,6 +13,9 @@ import (
 	texttemplate "text/template"
 	"time"
 
+	"github.com/yosssi/ace"
+	"golang.org/x/xerrors"
+
 	"github.com/brandur/modulir"
 	"github.com/brandur/modulir/modules/mace"
 	"github.com/brandur/modulir/modules/matom"
@@ -22,7 +25,6 @@ import (
 	"github.com/brandur/modulir/modules/mtemplatemd"
 	"github.com/brandur/modulir/modules/mtoml"
 	"github.com/brandur/mutelight/modules/ucommon"
-	"github.com/yosssi/ace"
 )
 
 //////////////////////////////////////////////////////////////////////////////
@@ -302,11 +304,11 @@ type Article struct {
 
 func (a *Article) validate(source string) error {
 	if a.Title == "" {
-		return fmt.Errorf("No title for article: %v", source)
+		return xerrors.Errorf("no title for article: %v", source)
 	}
 
 	if a.PublishedAt == nil {
-		return fmt.Errorf("No publish date for article: %v", source)
+		return xerrors.Errorf("no publish date for article: %v", source)
 	}
 
 	return nil
@@ -585,7 +587,9 @@ Disallow: /
 	if err != nil {
 		return true, err
 	}
-	outFile.WriteString(content)
+	if _, err := outFile.WriteString(content); err != nil {
+		return true, err
+	}
 	outFile.Close()
 
 	return true, nil

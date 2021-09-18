@@ -112,3 +112,14 @@ jobs:
           S3_BUCKET: mutelight-org
           TARGET_DIR: ./public
         if: github.ref == 'refs/heads/master'
+
+  golangci-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: "Check: golangci-lint"
+        uses: golangci/golangci-lint-action@v2
